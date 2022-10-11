@@ -7,19 +7,22 @@
 
 
 // Generate random number from 1 to 6
+let userRandom = 0;
+let pcRandom = 0;
 let sum = 0;
 
-const userRandomNumbers = [];
-for (i = 1; i <= 6; i++) {
-    let userRandom = Math.floor((Math.random(userRandomNumbers) * i) + 1);
-    console.log("user", userRandom);
-    sum += userRandom;
-    console.log(sum);
+
+userRandom = Math.floor((Math.random(userRandom) * 6) + 1);
+console.log("user", userRandom);
+
+pcRandom = Math.floor((Math.random(pcRandom) * 6) + 1);
+console.log("pc", pcRandom);
+
+if (userRandom > pcRandom) {
+    console.log("User ha vinto");
+} else if (pcRandom > userRandom) {
+    console.log("PC ha vinto");
+} else if (userRandom === pcRandom) {
+    console.log("PARI");
 }
 
-
-const pcRandomNumbers = [];
-for (i = 1; i <=6; i++) {
-    let pcRandom = Math.floor((Math.random(pcRandomNumbers) * i) + 1);
-    console.log("pc", pcRandom);
-}
